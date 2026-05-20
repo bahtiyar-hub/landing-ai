@@ -6,10 +6,12 @@ export default function Home() {
       {/* Navbar */}
       <nav className="flex items-center justify-between px-8 py-6 border-b border-gray-800">
         <h1 className="text-2xl font-bold">
-          DIGISOLVE AI
+        <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+        DIGISOLVE AI
+        </span>
         </h1>
 
-        <button className="bg-white text-black px-5 py-2 rounded-full font-semibold hover:scale-105 transition">
+        <button className="bg-white text-black px-5 py-2 rounded-full font-semibold hover:scale-110 transition duration-300 shadow-xl">
           Contact
         </button>
       </nav>
@@ -36,7 +38,7 @@ export default function Home() {
           <a
             href="https://wa.me/6285157292962?text=Halo%20saya%20tertarik%20dengan%20DIGISOLVE%20AI"
             target="_blank"
-            className="bg-green-500 hover:bg-green-400 text-black px-8 py-4 rounded-full font-bold transition"
+            className="bg-green-500 hover:bg-green-400 hover:scale-110 text-black px-8 py-4 rounded-full font-bold transition duration-300 shadow-2xl"
           >
             WhatsApp
           </a>
@@ -50,7 +52,7 @@ export default function Home() {
       {/* Services */}
       <section className="grid md:grid-cols-3 gap-6 px-8 pb-24">
 
-        <div className="border border-gray-800 rounded-3xl p-8 bg-gray-900">
+      <div className="border border-white/10 rounded-3xl p-8 bg-white/5 backdrop-blur-xl hover:scale-105 transition duration-300 shadow-2xl">
           <h3 className="text-2xl font-bold mb-4">
             Landing Page
           </h3>
@@ -60,7 +62,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="border border-gray-800 rounded-3xl p-8 bg-gray-900">
+        <div className="border border-white/10 rounded-3xl p-8 bg-white/5 backdrop-blur-xl hover:scale-105 transition duration-300 shadow-2xl">
           <h3 className="text-2xl font-bold mb-4">
             Automation
           </h3>
@@ -70,7 +72,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="border border-gray-800 rounded-3xl p-8 bg-gray-900">
+        <div className="border border-white/10 rounded-3xl p-8 bg-white/5 backdrop-blur-xl hover:scale-105 transition duration-300 shadow-2xl">
           <h3 className="text-2xl font-bold mb-4">
             AI System
           </h3>

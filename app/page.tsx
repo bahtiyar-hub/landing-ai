@@ -1,50 +1,92 @@
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
-import { HeroSection } from "@/components/HeroSection";
-import { InstallmentSimulator } from "@/components/InstallmentSimulator";
-import { LocationAdvantages } from "@/components/LocationAdvantages";
-import { Navbar } from "@/components/Navbar";
-import { HouseSpecifications } from "@/components/HouseSpecifications";
-import { PropertyGallery } from "@/components/PropertyGallery";
-import { Testimonials } from "@/components/Testimonials";
-import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
-
 export default function Home() {
   return (
-    <>
-      <div className="luxury-grain relative min-h-screen bg-[var(--luxury-bg)] text-stone-100">
-        <Navbar />
-        <main>
-          <HeroSection />
-          <LocationAdvantages />
-          <PropertyGallery />
-          <HouseSpecifications />
-          <InstallmentSimulator />
-          <Testimonials />
+    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full"></div>
+    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-8 py-6 border-b border-gray-800">
+        <h1 className="text-2xl font-bold">
+          DIGISOLVE AI
+        </h1>
 
-          <footer className="border-t border-[var(--luxury-border)] py-20 sm:py-24">
-            <div className="mx-auto max-w-7xl px-6 text-center sm:px-10 lg:px-12">
-              <p className="font-display text-3xl font-light text-white sm:text-4xl">
-                Mulai Perjalanan Hunian Eksklusif
-              </p>
-              <p className="mx-auto mt-4 max-w-md text-sm text-stone-500">
-                Jadwalkan konsultasi privat dengan relationship manager kami.
-              </p>
-              <a
-                href={whatsappUrl(DEFAULT_WHATSAPP_MESSAGE)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-luxury-primary mt-10"
-              >
-                Hubungi Properti Surabaya
-              </a>
-              <p className="mt-16 text-[10px] uppercase tracking-[0.3em] text-stone-600">
-                © {new Date().getFullYear()} Properti Surabaya
-              </p>
-            </div>
-          </footer>
-        </main>
-      </div>
-      <FloatingWhatsApp />
-    </>
-  );
+        <button className="bg-white text-black px-5 py-2 rounded-full font-semibold hover:scale-105 transition">
+          Contact
+        </button>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32">
+
+        <p className="text-green-400 mb-4 uppercase tracking-widest">
+          AI Builder Era
+        </p>
+
+        <h2 className="text-5xl md:text-7xl font-bold max-w-4xl leading-tight bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+          Build Modern Business
+          <br />
+          Faster With AI
+        </h2>
+
+        <p className="text-gray-400 mt-6 max-w-2xl text-lg">
+          Website, automation, landing page, AI tools,
+          dan sistem digital modern untuk bisnis masa kini.
+        </p>
+
+        <div className="flex gap-4 mt-10">
+          <a
+            href="https://wa.me/6285157292962?text=Halo%20saya%20tertarik%20dengan%20DIGISOLVE%20AI"
+            target="_blank"
+            className="bg-green-500 hover:bg-green-400 text-black px-8 py-4 rounded-full font-bold transition"
+          >
+            WhatsApp
+          </a>
+
+          <button className="border border-gray-600 px-8 py-4 rounded-full hover:bg-white hover:text-black transition">
+            Learn More
+          </button>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="grid md:grid-cols-3 gap-6 px-8 pb-24">
+
+        <div className="border border-gray-800 rounded-3xl p-8 bg-gray-900">
+          <h3 className="text-2xl font-bold mb-4">
+            Landing Page
+          </h3>
+
+          <p className="text-gray-400">
+            Website modern cepat dan responsive untuk bisnis dan iklan.
+          </p>
+        </div>
+
+        <div className="border border-gray-800 rounded-3xl p-8 bg-gray-900">
+          <h3 className="text-2xl font-bold mb-4">
+            Automation
+          </h3>
+
+          <p className="text-gray-400">
+            WhatsApp, CRM, AI follow up, dan workflow otomatis.
+          </p>
+        </div>
+
+        <div className="border border-gray-800 rounded-3xl p-8 bg-gray-900">
+          <h3 className="text-2xl font-bold mb-4">
+            AI System
+          </h3>
+
+          <p className="text-gray-400">
+            Build tools modern dengan AI-assisted development.
+          </p>
+        </div>
+
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-800 py-8 text-center text-gray-500">
+        © 2026 DIGISOLVE AI. All rights reserved.
+      </footer>
+
+    </main>
+  )
 }
